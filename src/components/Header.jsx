@@ -22,7 +22,7 @@
 
 //   useEffect(() => {
 //     // Initialize Socket.IO
-//     socketRef.current = io("http://localhost:3001", {
+//     socketRef.current = io("https://backend-6bli.onrender.com", {
 //       withCredentials: true,
 //     });
 
@@ -73,7 +73,7 @@
 
 //   const fetchNotifications = async () => {
 //     try {
-//       const response = await fetch("http://localhost:3001/employee/notifications", {
+//       const response = await fetch("https://backend-6bli.onrender.com/employee/notifications", {
 //         headers: {
 //           Authorization: `Bearer ${sessionStorage.getItem("employeeToken")}`,
 //           'x-user-id': sessionStorage.getItem("employeeId") || '',
@@ -90,7 +90,7 @@
 
 //   const markAsRead = async (id) => {
 //     try {
-//       await fetch(`http://localhost:3001/notifications/${id}/read`, {
+//       await fetch(`https://backend-6bli.onrender.com/notifications/${id}/read`, {
 //         method: "PATCH",
 //         headers: {
 //           Authorization: `Bearer ${sessionStorage.getItem("employeeToken")}`,
@@ -109,7 +109,7 @@
 //   const deleteNotification = async (id) => {
 //     if (window.confirm("Are you sure you want to delete this notification?")) {
 //       try {
-//         const response = await fetch(`http://localhost:3001/notifications/${id}`, {
+//         const response = await fetch(`https://backend-6bli.onrender.com/notifications/${id}`, {
 //           method: "DELETE",
 //           headers: {
 //             Authorization: `Bearer ${sessionStorage.getItem("employeeToken")}`,
@@ -350,7 +350,7 @@ const Header = ({ userName = "Employee" }) => {
 
   // Socket.IO & Notifications
   useEffect(() => {
-    socketRef.current = io("http://localhost:3001", { withCredentials: true });
+    socketRef.current = io("https://backend-6bli.onrender.com", { withCredentials: true });
 
     const token = sessionStorage.getItem("employeeToken");
     const getIdFromToken = (jwt) => {
@@ -394,7 +394,7 @@ const Header = ({ userName = "Employee" }) => {
 
   const fetchNotifications = async () => {
     try {
-      const response = await fetch("http://localhost:3001/employee/notifications", {
+      const response = await fetch("https://backend-6bli.onrender.com/employee/notifications", {
         headers: {
           Authorization: `Bearer ${sessionStorage.getItem("employeeToken")}`,
           "x-user-id": sessionStorage.getItem("employeeId") || "",
@@ -409,7 +409,7 @@ const Header = ({ userName = "Employee" }) => {
 
   const markAsRead = async (id) => {
     try {
-      await fetch(`http://localhost:3001/notifications/${id}/read`, {
+      await fetch(`https://backend-6bli.onrender.com/notifications/${id}/read`, {
         method: "PATCH",
         headers: {
           Authorization: `Bearer ${sessionStorage.getItem("employeeToken")}`,
@@ -426,7 +426,7 @@ const Header = ({ userName = "Employee" }) => {
   const deleteNotification = async (id) => {
     if (window.confirm("Are you sure you want to delete this notification?")) {
       try {
-        const response = await fetch(`http://localhost:3001/notifications/${id}`, {
+        const response = await fetch(`https://backend-6bli.onrender.com/notifications/${id}`, {
           method: "DELETE",
           headers: {
             Authorization: `Bearer ${sessionStorage.getItem("employeeToken")}`,

@@ -24,7 +24,7 @@ const Payroll = () => {
     setError(null);
     try {
       const token = sessionStorage.getItem('employeeToken');
-      const { data } = await axios.get("http://localhost:3001/employee/payrolls", {
+      const { data } = await axios.get("https://backend-6bli.onrender.com/employee/payrolls", {
         headers: { Authorization: `Bearer ${token}` },
       });
       // Map API response to match table keys

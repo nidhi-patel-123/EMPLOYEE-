@@ -13,7 +13,7 @@ export default function Attendance() {
       try {
         const token = sessionStorage.getItem("employeeToken");
         const res = await axios.get(
-          "http://localhost:3001/employee/attendance",
+          "https://backend-6bli.onrender.com/employee/attendance",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -44,7 +44,7 @@ export default function Attendance() {
       if (!checkIn) {
         // Check-in
         const res = await axios.post(
-          "http://localhost:3001/employee/attendance/checkin",
+          "https://backend-6bli.onrender.com/employee/attendance/checkin",
           {},
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -56,7 +56,7 @@ export default function Attendance() {
       } else if (!checkOut) {
         // Check-out
         const res = await axios.post(
-          "http://localhost:3001/employee/attendance/checkout",
+          "https://backend-6bli.onrender.com/employee/attendance/checkout",
           {},
           { headers: { Authorization: `Bearer ${token}` } }
         );

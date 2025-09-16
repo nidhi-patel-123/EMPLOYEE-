@@ -22,21 +22,21 @@ export default function Dashboard() {
     const token = sessionStorage.getItem('employeeToken');
     const headers = { Authorization: `Bearer ${token}` };
     // Fetch attendance
-    axios.get('http://localhost:3001/employee/attendance', { headers })
+    axios.get('https://backend-6bli.onrender.com/employee/attendance', { headers })
       .then(res => {
         setAttendance(res.data.length ? Math.round((res.data.filter(a => a.checkIn && a.checkOut).length / res.data.length) * 100) : 0);
       })
       .catch(() => setAttendance(null));
     // Fetch leaves
-    axios.get('http://localhost:3001/employee/leaves', { headers })
+    axios.get('https://backend-6bli.onrender.com/employee/leaves', { headers })
       .then(res => setLeaves(res.data))
       .catch(() => setLeaves([]));
     // Fetch projects
-    axios.get('http://localhost:3001/employee/projects', { headers })
+    axios.get('https://backend-6bli.onrender.com/employee/projects', { headers })
       .then(res => setProjects(res.data))
       .catch(() => setProjects([]));
     // Fetch payrolls
-    axios.get('http://localhost:3001/employee/payrolls', { headers })
+    axios.get('https://backend-6bli.onrender.com/employee/payrolls', { headers })
       .then(res => setSalaryStatus(res.data.length && res.data[0].status ? res.data[0].status : "--"))
       .catch(() => setSalaryStatus("--"));
   }, []);
