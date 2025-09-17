@@ -10,6 +10,7 @@ import Header from "./components/Header";
 import MyProfile from "./components/MyProfile";
 import Attendance from "./components/Attendance";
 import EmployeeLogin from "./components/EmployeeLogin";
+import EmployeePerfomance from "./components/EmployeePerfomance";
 
 function ProtectedRoute({ children }) {
   const token = sessionStorage.getItem('employeeToken');
@@ -42,6 +43,7 @@ function App() {
                       <Route path="/projects" element={<Projects />} />
                       <Route path="/payroll" element={<PayrollList />} />
                       <Route path="/settings" element={<Setting />} />
+                      <Route path="/employee-p" element={<EmployeePerfomance />} />
                     </Routes>
                   </div>
                 </div>

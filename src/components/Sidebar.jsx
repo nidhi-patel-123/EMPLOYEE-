@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
+import { PiUsersThreeLight } from 'react-icons/pi';
+
 import {
   HomeIcon,
   // UserGroupIcon,
@@ -22,6 +24,7 @@ const Sidebar = () => {
     { name: "Add-Leave", icon: <CalendarIcon className="h-6 w-6" />, path: "/leave" },
     { name: "Projects", icon: <BriefcaseIcon className="h-6 w-6" />, path: "/projects" },
     { name: "PayrollList", icon: <CurrencyDollarIcon className="h-6 w-6" />, path: "/payroll" },
+    { name: "My-Performance", icon: <PiUsersThreeLight className="h-8 w-8" />, path: "/employee-p" },
     { name: "Settings", icon: <Cog6ToothIcon className="h-6 w-6" />, path: "/settings" },
   ];
 
