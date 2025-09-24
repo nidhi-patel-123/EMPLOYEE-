@@ -49,7 +49,7 @@ const MyProfile = () => {
 
   return (
     <div className="p-6">
-      <div className="bg-white shadow-lg rounded-2xl p-6 max-w-3xl mx-auto">
+      <div className="bg-white shadow-lg rounded-2xl p-20 max-w-6xl mx-auto">
         <h2 className="text-2xl font-bold mb-6 text-[#113a69]">My Profile</h2>
         {/* Top Section */}
         <div className="flex items-center gap-6 mb-6">

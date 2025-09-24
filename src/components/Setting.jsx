@@ -131,7 +131,7 @@ export default function Setting() {
     navigate('/login');
   };
 
-  const tabs = ["Profile", "Security"];
+  const tabs = ["Profile"];
 
   // Helper for toggling password visibility
   const toggleShowPassword = (field) => {
@@ -159,7 +159,7 @@ export default function Setting() {
         ))}
         <button
           onClick={handleLogout}
-          className="ml-auto px-6 py-2 rounded-t-lg font-medium bg-red-500 text-white hover:bg-red-600"
+          className="ml-auto px-6 py-2 rounded-lg font-medium bg-red-500 text-white hover:bg-red-600 mb-5"
         >
           Logout
         </button>

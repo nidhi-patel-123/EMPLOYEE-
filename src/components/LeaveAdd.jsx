@@ -118,6 +118,7 @@ export default function EmployeeLeaves() {
                 <th className="p-3 border">From</th>
                 <th className="p-3 border">To</th>
                 <th className="p-3 border">Description</th>
+                <th className="p-3 border">Reject Reason</th>
                 <th className="p-3 border">Status</th>
               </tr>
             </thead>
@@ -129,6 +130,7 @@ export default function EmployeeLeaves() {
                   <td className="p-3 border">{leave.from?.slice(0, 10)}</td>
                   <td className="p-3 border">{leave.to?.slice(0, 10)}</td>
                   <td className="p-3 border">{leave.description}</td>
+                  <td className="p-3 border">{leave.rejectReason}</td>
                   <td className="p-3 border">
                     <span
                       className={`px-3 py-1 rounded-full text-xs ${leave.status === "Approved"
