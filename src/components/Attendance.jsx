@@ -211,7 +211,7 @@ export default function Attendance() {
                 disabled={!checkIn || !!breakStart}
                 className={`px-4 py-2 rounded-md text-white font-medium ${!checkIn || !!breakStart
                     ? "bg-gray-400 cursor-not-allowed"
-                    : "bg-yellow-500 hover:bg-yellow-600"
+                    : "bg-green-600 hover:bg-green-700"
                   }`}
               >
                 Set Current Time
@@ -229,7 +229,7 @@ export default function Attendance() {
                 disabled={!breakStart || !!breakEnd}
                 className={`px-4 py-2 rounded-md text-white font-medium ${!breakStart || !!breakEnd
                     ? "bg-gray-400 cursor-not-allowed"
-                    : "bg-yellow-500 hover:bg-yellow-600"
+                    : "bg-green-600 hover:bg-green-700"
                   }`}
               >
                 Set Current Time
@@ -247,7 +247,7 @@ export default function Attendance() {
                 disabled={!checkIn || !!checkOut} // ✅ Break not required
                 className={`px-4 py-2 rounded-md text-white font-medium ${!checkIn || !!checkOut
                     ? "bg-gray-400 cursor-not-allowed"
-                    : "bg-red-600 hover:bg-red-700"
+                    : "bg-green-600 hover:bg-green-700"
                   }`}
               >
                 Set Current Time
