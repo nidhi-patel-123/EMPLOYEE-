@@ -11,6 +11,7 @@ import MyProfile from "./components/MyProfile";
 import Attendance from "./components/Attendance";
 import EmployeeLogin from "./components/EmployeeLogin";
 import EmployeePerfomance from "./components/EmployeePerfomance";
+import Chat from "./components/Chat";
 
 function ProtectedRoute({ children }) {
   const token = sessionStorage.getItem('employeeToken');
@@ -44,6 +45,7 @@ function App() {
                       <Route path="/payroll" element={<PayrollList />} />
                       <Route path="/settings" element={<Setting />} />
                       <Route path="/employee-p" element={<EmployeePerfomance />} />
+                      <Route path="/chat" element={<Chat/>}/>
                     </Routes>
                   </div>
                 </div>

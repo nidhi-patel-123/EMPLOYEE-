@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 import { PiUsersThreeLight } from 'react-icons/pi';
+import { TbMessageChatbot } from "react-icons/tb";
+
 import {
   HomeIcon,
   CalendarIcon,
@@ -26,6 +28,8 @@ const Sidebar = () => {
     { name: "Projects", icon: <BriefcaseIcon className="h-7 w-7" />, path: "/projects" },
     { name: "Payroll", icon: <CurrencyDollarIcon className="h-7 w-7" />, path: "/payroll" },
     { name: "Performance", icon: <PiUsersThreeLight className="h-7 w-7" />, path: "/employee-p" },
+        { name: "Chat", icon: <TbMessageChatbot className="h-8 w-8" />, path: "/chat" },
+    
     { name: "Settings", icon: <Cog6ToothIcon className="h-7 w-7" />, path: "/settings" },
   ];
 
